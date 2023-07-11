@@ -107,14 +107,35 @@
   
   <div class="main-content">
     <h2>Contacto</h2>
-    <p><i class="fas fa-envelope icon"></i> Ponte en contacto con nosotros para cualquier consulta, solicitud o reserva. Nuestro equipo de atención al cliente estará encantado de ayudarte. Utiliza los siguientes datos de contacto para comunicarte con nosotros.</p>
+    <p><i class="fas fa-envelope icon"></i> Ponte en contacto con nosotros para cualquier consulta, solicitud o reserva. Nuestro equipo de atención al cliente estará "encantado" de ayudarte. Utiliza los siguientes datos de contacto para comunicarte con nosotros.</p>
     <p>Teléfono: +1 234 567 890</p>
     <p>Email: info@pandaconastas.com</p>
+    <p style="font-style: italic; color: #ff0000;">Nota: "Nuestro" equipo está "capacitado" para atender cualquier solicitud, incluso si vienes a "arreglar" problemas como Deadpool o algún otro antihéroe. Solo recuerda que somos un hotel y no podemos garantizar resultados heroicos o justicieros.</p>
+    <div id="video-container"></div>
     <a href="index.php">Volver a Inicio</a>
   </div>
   
   <footer>
     <p>Derechos de autor &copy; 2023 Hotel Panda con Astas. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    // Obtener el elemento contenedor del video
+    const videoContainer = document.getElementById("video-container");
+
+    // Array de videos de YouTube
+    const youtubeVideos = [
+      "sgKK0YRQyMQ",
+      "dp6cLZisGuA",
+      "LZ7OSs90-Rs",
+      // Agrega más ID de videos de YouTube aquí
+    ];
+
+    // Obtener un video aleatorio del array
+    const randomVideo = youtubeVideos[Math.floor(Math.random() * youtubeVideos.length)];
+
+    // Insertar el video en el contenedor
+    videoContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${randomVideo}?autoplay=1&mute=0" frameborder="0" allowfullscreen allow="autoplay"></iframe>`;
+  </script>
 </body>
 </html>
