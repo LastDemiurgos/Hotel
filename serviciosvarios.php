@@ -1,7 +1,7 @@
 <?php
 
 class CConexion {
-	function ConexionBD(){
+	static function ConexionBD(){
 		
 		$host = 'localhost';
 		$dbname = 'hotel';
@@ -10,13 +10,18 @@ class CConexion {
 
 		try {
 			$conn = new PDO("pgsql:host=$host;dbname=$dbname", $username, $password);
-			echo "se conectó";
+			return $conn;
 		} catch (PDOException $exp) {
 			echo "no se pudo, " . $exp->getMessage();
+			return null;
 		}
-		return $conn;
 	}
-
 }
+
+// Crear la vista "serviciosvarios"
+$conn = CConexion::ConexionBD();
+
+// Comprueba si la conexión es exitosa
+
 
 ?>
