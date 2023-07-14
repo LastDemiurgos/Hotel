@@ -216,6 +216,8 @@ if (isset($_POST['pasaporte_elim'])) {
 
     <h2>Tabla Cliente</h2>
     <?php
+
+    
     // Mostrar tabla Cliente
     $conn = CConexion::ConexionBD();
     if ($conn) {
